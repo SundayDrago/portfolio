@@ -57,3 +57,9 @@ window.onscroll=()=>{
 
   ScrollReveal().reveal('.home-content h1, about-img', {origin:'left'});
   ScrollReveal().reveal('home-content p, about-content', {origin:'right'});
+
+  // Set dynamic footer year
+  (function(){
+    var y = document.getElementById('year');
+    if (y) { y.textContent = new Date().getFullYear(); }
+  })();
