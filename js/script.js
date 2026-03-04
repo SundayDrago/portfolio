@@ -63,3 +63,20 @@ window.onscroll=()=>{
     var y = document.getElementById('year');
     if (y) { y.textContent = new Date().getFullYear(); }
   })();
+
+  
+const layoutSelect = document.getElementById("layout-select");
+const body = document.body;
+
+layoutSelect.addEventListener("change", function () {
+  body.classList.remove(
+    "layout-wide",
+    "layout-compact",
+    "layout-masonry"
+  );
+
+  if (this.value !== "default") {
+    body.classList.add(this.value);
+  }
+});
+
